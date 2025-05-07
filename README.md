@@ -27,5 +27,45 @@ The project uses predefined methods from the Java File class to check if files/f
 
  Note: The code runs in an infinite loop and does not stop until the user types the command exit, which triggers the exit function.
  //--------------------------------------------------------------------------------------------------------------------------------------------
- :)
+ :) 3.Example? compiler: Welcome to MiniShell! Type 'help' for a list of commands.
+
+user: help
+
+compiler: there are an available Commands that you can use: 1.cd [directory_name] - Change current directory 2.cd..[with adding ..] - Use '..' to move to parent directory 3.mkdir [directory_name] - Create a new directory" 4.touch [file_name] - Create a new file 5.ls - List files and directories in the current directory 6.pwd - Print current working directory path 7.help - Show this help message 8.exit - Exit the program
+
+user: mkdir compiler: Usage: mkdir [directory_name]
+
+user:mkdir folder1 compiler:Directory created: folder1
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
+:) 4.short explanation for the methods:
+---> ShellCommandHandler Class Functions:
+Constructor (ShellCommandHandler())
+This function initializes the currentDirectory using System.getProperty("user.dir") to get the user's starting directory. It ensures the shell begins in the right location.
+
+printWorkingDirectory()
+This function prints the absolute path of the current directory by calling getAbsolutePath() on currentDirectory. It’s used for the pwd command.
+
+listDirectory()
+This function lists all files and directories in currentDirectory using listFiles() and a for loop. It uses isDirectory() and isFile() to print each item with a label like [DIR] or [FILE].
+
+changeDirectory(String name)
+This function changes the working directory based on user input. It uses conditions (if, equals, and getParentFile()) to handle moving into subfolders or going up with ...
+
+makeDirectory(String n)
+This function creates a new folder inside currentDirectory using the mkdir() method. It checks if the folder exists with exists() and shows messages based on success or failure.
+
+createFile(String m)
+This function creates a new file using createNewFile() inside try-catch to handle IOException. It checks if the file exists and gives feedback for each case.
+
+printHelp()
+This function displays a list of all supported commands with a short explanation. It is triggered by the help command.
+
+getCurrentDirectory()
+This function returns the current working directory so the MiniShell class can use it to show the shell prompt.
+
+----> MiniShell Class Functions:
+main(String[] args)
+This is the main method that runs the shell. It creates a ShellCommandHandler object, uses Scanner to get user input, splits it into command and argument, and uses if-else to match the input with the right function.
+
+
  
