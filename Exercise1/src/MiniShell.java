@@ -8,7 +8,7 @@ public class MiniShell {
         ShellCommandHandler handler = new ShellCommandHandler();
 
         System.out.println("Welcome to MiniShell! Type 'help' for a list of commands.");
-//if statment way
+//infinite loop for running the commands 
         while (true) {
             System.out.print(handler.getCurrentDirectory().getAbsolutePath() + " > ");
             String input = scanner.nextLine().trim();
@@ -16,7 +16,7 @@ public class MiniShell {
             String command = parts[0];
             String argument = parts.length > 1 ? parts[1] : null;
 
-            //switch way
+            //switch case for choosing the commands 
             switch (command) {
                 case "pwd":
                     handler.printWorkingDirectory();
