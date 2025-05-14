@@ -1,4 +1,4 @@
-# MiniShell
+# MiniShell :)
 
 A simple Java-based command-line shell implementation that provides basic file system navigation and manipulation capabilities.
 
