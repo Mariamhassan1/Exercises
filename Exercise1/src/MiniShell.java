@@ -43,29 +43,6 @@ public class MiniShell {
                     System.out.println("Unknown command. Type 'help' to see available commands.");
             }
 
-//            if (command.equals("pwd")){
-//                handler.printWorkingDirectory();}
-//            else if (command.equals("ls")) {
-//                handler.listDirectory();
-//            }
-//            else if (command.equals("cd")) {
-//                handler.changeDirectory(argument);
-//            }
-//            else if (command.equals("touch")) {
-//                handler.createFile(argument);
-//            }
-//            else if (command.equals("mkdir")) {
-//                handler.makeDirectory(argument);
-//            }
-//            else if (command.equals("help")) {
-//                handler.printHelp();
-//            }
-//            else if (command.equals("exit")) {
-//                System.out.println("Goodbye user!thank you");
-//                return;
-//            }
-//            else{ System.out.println("Unknown command. Type 'help' to see available commands.");}
-//        }
         }
     }
 }
